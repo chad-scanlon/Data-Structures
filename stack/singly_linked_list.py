@@ -2,7 +2,7 @@
 
 # lets make some node class
 class Node:
-    def __init__(self, value, next_node = None):
+    def __init__(self, value=None, next_node = None):
         # value that the node is holding
         self.value = value
         # ref to the next node in the chain
@@ -43,7 +43,7 @@ class LinkedList:
 
     def add_to_tail(self, value):
         # wrap the value in a new Node
-        new_node = Node(value)
+        new_node = Node(value, None)
         # check if the linked list is empty
         if self.head is None and self.tail is None:
             # set the head and tail to the new node
